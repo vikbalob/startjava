@@ -7,18 +7,27 @@ public class Calculator {
         float num1 = scanner.nextFloat();
         char operation = scanner.next().charAt(0);
         float num2 = scanner.nextFloat();
-        if (operation == '+') {
-            System.out.println(num1 + num2);
+
+
+        if (num1 < 0 || num2 < 0) {
+            System.out.println("Введите положительное число!");
+        } else if (operation == '+') {
+            System.out.println("Сумма чисел = " + (num1 + num2));
         } else if (operation == '-') {
-            System.out.println(num1 - num2);
+            System.out.println("Разность чисел = " + (num1 - num2));
         } else if (operation == '*') {
-            System.out.println(num1 * num2);
+            System.out.println("Произведение чисел = " + (num1 * num2));
         } else if (operation == '/') {
-            System.out.println(num1 / num2);
+            System.out.println("Частное чисел = " + (num1 / num2));
         } else if (operation == '%') {
-            System.out.println(num1 % num2);
+            System.out.println("Деление чисел по модулю = " + (num1 % num2));
         } else if (operation == '^') {
-            System.out.println(Math.pow(num1, num2));
+            float result = 1;
+            for (int i = 1; i <= num2; i++) {
+               result *= num1;
+            }
+            System.out.println(num1 + " в степени " + num2 + " = " + result);
         } else
             System.out.println("Введена неправильная операция");
     }
+}
