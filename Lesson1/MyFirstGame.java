@@ -20,7 +20,6 @@ public class MyFirstGame {
                 System.out.println("Ваше число меньше");
             }
         } while (userNum != compNum);
-        System.out.println("Вы угадали!");
-        System.out.println("Количество попыток: " + attempts);
+        System.out.println("Вы угадали с " + attempts + " попытки");
     }
 }
