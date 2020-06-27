@@ -8,9 +8,8 @@ public class Calculator {
         char operation = scanner.next().charAt(0);
         float num2 = scanner.nextFloat();
 
-
         if (num1 < 0 || num2 < 0) {
-            System.out.println("Введите положительное число!");
+            System.out.println("Одно из чисел не является положительным! Программа завершается.");
         } else if (operation == '+') {
             System.out.println("Сумма чисел = " + (num1 + num2));
         } else if (operation == '-') {
