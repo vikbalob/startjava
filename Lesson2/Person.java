@@ -13,7 +13,7 @@ public class Person {
 
     }
 
-    String learnjava() {
+    String learnJava() {
 
     }
 
