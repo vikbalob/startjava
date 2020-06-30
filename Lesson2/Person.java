@@ -1,8 +1,8 @@
 public class Person {
-    String sex = male;
-    String name = Paul;
+    String sex = "male";
+    String name = "Paul";
     int height = 180;
-    int weight = 80;
+    float weight = 80.0;
     int age = 30;
 
     boolean go() {
