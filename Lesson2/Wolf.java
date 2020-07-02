@@ -7,7 +7,6 @@ public class Wolf {
 	String color;
 
 	boolean go() {
-
 		return true;
 	}
 
@@ -26,7 +25,4 @@ public class Wolf {
 	String hunt() {
 		return "Looking for prey";
 	}
-
-
-
 }
