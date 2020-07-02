@@ -6,5 +6,7 @@ public class WolfTest {
 		wolfOne.weight = 12f;
 		System.out.println(wolfOne.name);
 		System.out.println(wolfOne.weight);
+		System.out.println(wolfOne.run());
+		System.out.println(wolfOne.howl());
 	}
 }
