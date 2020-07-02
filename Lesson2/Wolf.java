@@ -1,12 +1,13 @@
 public class Wolf {
 	
-	String sex = "male";
-	String name = "Wild";
-	float weight = 40.0f;
-	int age = 12; 
-	String color = "grey";
+	String sex;
+	String name;
+	float weight;
+	int age;
+	String color;
 
 	boolean go() {
+
 		return true;
 	}
 
