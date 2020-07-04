@@ -1,12 +1,12 @@
 public class WolfTest {
 
-	public static void main (String [] args) {
-		Wolf wolfOne = new Wolf();
-		wolfOne.name = "Jack";
-		wolfOne.weight = 12f;
-		System.out.println(wolfOne.name);
-		System.out.println(wolfOne.weight);
-		System.out.println(wolfOne.run());
-		System.out.println(wolfOne.howl());
-	}
+    public static void main(String[] args) {
+        Wolf wolfOne = new Wolf();
+        wolfOne.setName("Jack");
+        wolfOne.setWeight(12f);
+        wolfOne.setAge(-200);
+        System.out.println("Wolf`s age = " + wolfOne.getAge());
+        System.out.println("Wolf`s name = " + wolfOne.getName());
+        System.out.println("Wolf`s weight = " + wolfOne.getWeight());
+    }
 }
