@@ -17,22 +17,5 @@ public class CalculatorTest {
             System.out.println("Do you want to continue? [Y/N]: ");
             sc.nextLine();
         } while (sc.nextLine().equalsIgnoreCase("Y"));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
