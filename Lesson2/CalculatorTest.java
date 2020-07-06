@@ -13,8 +13,8 @@ public class CalculatorTest {
             calc.setOperation(sc.next().charAt(0));
             System.out.println("Enter second number");
             calc.setNum2(sc.nextFloat());
-            System.out.println(calc.getResult());
-            System.out.println("Do you want to continue? [Y/N]: ");
+            System.out.println(calc.calculate());
+            System.out.println("Do you want to continue? [Y/N]:");
             sc.nextLine();
         } while (sc.nextLine().equalsIgnoreCase("Y"));
     }

@@ -1,6 +1,7 @@
 public class Calculator {
-    float num1, num2;
-    char operation;
+    private float num1;
+    private float num2;
+    private char operation;
 
     public float getNum1() {
         return num1;
@@ -26,8 +27,8 @@ public class Calculator {
         this.operation = operation;
     }
 
-    public float result() {
-        float result = 1;
+    public float calculate() {
+        float result = 0;
         switch (operation) {
             case '+':
                 result = num1 + num2;
@@ -40,10 +41,15 @@ public class Calculator {
                 break;
             case '/':
                 result = num1 / num2;
+                if (num2 == 0) {
+                    System.out.println("Error! You cannot divide by zero.");
+                }
                 break;
             case '%':
                 result = num1 % num2;
+                break;
             case '^':
+                result = 1;
                 for (int i = 1; i <= num2; i++) {
                     result *= num1;
                 }
@@ -52,8 +58,5 @@ public class Calculator {
                 System.out.println("Wrong operation! Try again.");
         }
         return result;
-    }
-    public float getResult() {
-        return result();
     }
 }
