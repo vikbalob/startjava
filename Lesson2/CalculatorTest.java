@@ -16,6 +16,18 @@ public class CalculatorTest {
             System.out.println(calc.calculate());
             System.out.println("Do you want to continue? [Y/N]:");
             sc.nextLine();
+            String answer = sc.nextLine();
+            if (answer == "Y") {
+                break;
+            } else if (answer == "N") {
+                break;
+            } else {
+                do {
+                    System.out.println("Enter the correct answer! [Y/N]");
+                    sc.nextLine();
+                } while (sc.nextLine() != "Y" || sc.nextLine() != "N");
+            }
         } while (sc.nextLine().equalsIgnoreCase("Y"));
     }
 }
+
