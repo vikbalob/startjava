@@ -3,24 +3,12 @@ public class Calculator {
     private float num2;
     private char operation;
 
-    public float getNum1() {
-        return num1;
-    }
-
     void setNum1(float num1) {
         this.num1 = num1;
     }
 
-    public float getNum2() {
-        return num2;
-    }
-
     void setNum2(float num2) {
         this.num2 = num2;
-    }
-
-    public char getOperation() {
-        return operation;
     }
 
     void setOperation(char operation) {
@@ -40,9 +28,10 @@ public class Calculator {
                 result = num1 * num2;
                 break;
             case '/':
-                result = num1 / num2;
                 if (num2 == 0) {
                     System.out.println("Error! You cannot divide by zero.");
+                } else {
+                    result = num1 / num2;
                 }
                 break;
             case '%':

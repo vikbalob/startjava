@@ -5,10 +5,10 @@ public class CalculatorTest {
     public static void main(String[] args) {
         Calculator calc = new Calculator();
         Scanner sc = new Scanner(System.in);
-        String answer = "Y";
+        char answer = 'Y';
 
-        while (!answer.equals("N")) {
-            if (answer.equals("Y")) {
+        while (answer != 'N') {
+            if (answer == 'Y') {
                 System.out.println("Enter first number");
                 calc.setNum1(sc.nextFloat());
                 System.out.println("Enter char of the math operation");
@@ -18,16 +18,10 @@ public class CalculatorTest {
                 System.out.println(calc.calculate());
             }
             System.out.println("Do you want to continue? [Y/N]:");
-            answer = sc.next();
-            if (!answer.equals("N") && !answer.equals("Y")) {
+            answer = sc.next().charAt(0);
+            if (answer != 'N' && answer != 'Y') {
                 System.out.println("Wrong answer! Try again!");
             }
         }
     }
 }
-
-
-
-
-
-
