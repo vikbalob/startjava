@@ -12,6 +12,7 @@ public class Jaeger {
     public String getModelName() {
         return modelName;
     }
+
     public void setModelName(String modelName) {
         this.modelName = modelName;
     }
@@ -71,8 +72,4 @@ public class Jaeger {
     public void setArmor(int armor) {
         this.armor = armor;
     }
-
-
-
-
 }

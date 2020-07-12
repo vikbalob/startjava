@@ -2,7 +2,6 @@ public class JaegerTest {
 
     public static void main(String[] args) {
         Jaeger jaeger1 = new Jaeger();
-        Jaeger jaeger2 = new Jaeger();
 
         jaeger1.setModelName("Crimson Typhoon");
         jaeger1.setMark("Mark-4");
@@ -24,6 +23,7 @@ public class JaegerTest {
 
         System.out.println();
 
+        Jaeger jaeger2 = new Jaeger();
         jaeger2.setModelName("Horizon Brave");
         jaeger2.setMark("Mark-1");
         jaeger2.setHeight(72.54f);
