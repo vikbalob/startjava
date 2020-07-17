@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class GuessNumber {
 
     Scanner sc = new Scanner(System.in);
@@ -14,29 +15,26 @@ public class GuessNumber {
         int compNum = (int) (Math.random() * 101);
         do {
             System.out.println("Enter the number (" + player1.getName() + "):");
-            Player numPlayer1 = new Player(sc.nextInt());
-            if (numPlayer1.getNumber() < compNum) {
+            player1.setNumber(sc.nextInt());
+            if (player1.getNumber() < compNum) {
                 System.out.println("The number is greater than yours!");
             } else if (player1.getNumber() > compNum) {
                 System.out.println("The number less than yours!");
-            } else {
+            } else if (player1.getNumber() == compNum) {
+                System.out.println("Winner is " + player1.getName());
                 break;
             }
+
             System.out.println("Enter the number (" + player2.getName() + "):");
-            Player numPlayer2 = new Player(sc.nextInt());
-            if (numPlayer2.getNumber() < compNum) {
+            player2.setNumber(sc.nextInt());
+            if (player2.getNumber() < compNum) {
                 System.out.println("The number is greater than yours!");
             } else if (player2.getNumber() > compNum) {
                 System.out.println("The number less than yours!");
-            } else {
+            } else if (player2.getNumber() == compNum) {
+                System.out.println("Winner is " + player2.getName());
                 break;
             }
-        } while (player1.getNumber() != compNum || player2.getNumber() != compNum);
-
-        if (player1.getNumber() == compNum) {
-            System.out.println("Winner is " + player1.getName());
-        } else {
-            System.out.println("Winner is " + player2.getName());
-        }
+        } while (true);
     }
 }
