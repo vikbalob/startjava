@@ -1,8 +1,6 @@
 package com.startjava.lesson_2_3_4.calculator;
 
-
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class Calculator {
 
@@ -13,14 +11,11 @@ public class Calculator {
         while (answer != 'N') {
             if (answer == 'Y') {
                 System.out.print("Enter the math expression on one line. (For example 2+2): ");
-                String text = sc.nextLine();
-                text.replaceAll("\\s", "");
+                String [] expression = sc.next().split("");
+                int num1 = Integer.parseInt(expression[0]);
+                char sign = expression[1].charAt(0);
+                int num2 = Integer.parseInt(expression[2]);
 
-                String[] numbers = text.split("[\\Q^*/+-%\\E]");
-                
-                int num1 = Integer.parseInt(members[0]);
-                char sign = members[1].charAt(0);
-                int num2 = Integer.parseInt(members[2]);
                 System.out.println(calculate(num1, sign, num2));
             }
             System.out.println("Do you want to continue? [Y/N]:");
