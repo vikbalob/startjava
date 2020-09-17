@@ -1,5 +1,5 @@
 out
-*.xml
 *.class
-.idea
+*.xml
 *.iml
+.idea

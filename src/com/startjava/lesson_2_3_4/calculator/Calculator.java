@@ -17,9 +17,9 @@ public class Calculator {
 
                 String[] numbers = text.split("[\\Q^*/+-%\\E]");
                 
-                int num1 = Integer.parseInt(members[0]);
-                char sign = members[1].charAt(0);
-                int num2 = Integer.parseInt(members[2]);
+                int num1 = Integer.parseInt(numbers[0]);
+                char sign = numbers[1].charAt(0);
+                int num2 = Integer.parseInt(numbers[2]);
                 System.out.println(calculate(num1, sign, num2));
             }
             System.out.println("Do you want to continue? [Y/N]:");
