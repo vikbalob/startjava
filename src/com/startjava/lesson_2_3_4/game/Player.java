@@ -15,19 +15,24 @@ public class Player {
         return name;
     }
 
-    public int[] getNumbers() {
-        return Arrays.copyOf(numbers, attempt + 1);
+    public int returnLastNum() {
+        return numbers[attempt - 1];
     }
 
-    public void setNumbers(int numbers) {
-        this.numbers[attempt] = numbers;
+    public int[] getNumbers() {
+        return Arrays.copyOf(numbers, attempt);
+    }
+
+    public void setNumber(int number) {
+        this.numbers[attempt] = number;
+        attempt++;
     }
 
     public int getAttempt() {
         return attempt;
     }
 
-    public void setAttempt(int attempt) {
-        this.attempt = attempt;
+    public void zeroArray() {
+        Arrays.fill(numbers, 0, attempt, 0);
     }
 }

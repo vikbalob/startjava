@@ -9,9 +9,8 @@ public class GuessNumberTest {
         char answer = 'Y';
         while (answer != 'N') {
             if (answer == 'Y') {
-                System.out.println("TASK: Guess the number (from 0 to 100).");
-                System.out.println("You have 10 attempts.");
-                System.out.println();
+                System.out.println("\nTASK: Guess the number (from 0 to 100).");
+                System.out.println("You have 10 attempts. \n");
                 System.out.print("Enter name of the first player: ");
                 Player player1 = new Player(sc.next());
                 System.out.print("Enter name of the second player: ");
