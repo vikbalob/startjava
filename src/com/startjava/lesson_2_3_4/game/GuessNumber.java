@@ -15,8 +15,8 @@ public class GuessNumber {
 
     public void startGame() {
         randomNumber = (int) (Math.random() * 101);
-        while (makeMove(player2)) {
-            if (makeMove(player1)) { //
+        while (true) {
+            if (makeMove(player1)) {
                 break;
             }
             if (makeMove(player2)) {
@@ -33,7 +33,7 @@ public class GuessNumber {
         if (player.getAttempt() > 9) {
             System.out.println("Attempts is ended.");
             System.out.println("Computer`s number was " + randomNumber);
-            return false;
+            return true;
         }
         enterNumber(player);
         return checkNumber(player);
