@@ -18,12 +18,12 @@ public class GuessNumberTest {
                 GuessNumber game = new GuessNumber(player1, player2);
                 game.startGame();
             }
-            System.out.print("Do you want to continue? [Y/N]: ");
+            System.out.print("\nDo you want to continue? [Y/N]: ");
             answer = sc.next().charAt(0);
             if (answer != 'N' && answer != 'Y') {
                 System.out.println("Wrong answer! Try again!");
             }
         }
-        System.out.println("Goodbye! Until next time!");
+        System.out.println("\nGoodbye! Until next time!");
     }
 }

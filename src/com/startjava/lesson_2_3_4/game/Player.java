@@ -15,7 +15,7 @@ public class Player {
         return name;
     }
 
-    public int returnLastNum() {
+    public int getLastNumber() {
         return numbers[attempt - 1];
     }
 
@@ -24,7 +24,7 @@ public class Player {
     }
 
     public void setNumber(int number) {
-        this.numbers[attempt] = number;
+        numbers[attempt] = number;
         attempt++;
     }
 
@@ -32,7 +32,7 @@ public class Player {
         return attempt;
     }
 
-    public void zeroArray() {
+    public void clearNumbers() {
         Arrays.fill(numbers, 0, attempt, 0);
     }
 }
