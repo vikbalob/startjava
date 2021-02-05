@@ -1,7 +1,6 @@
 package com.startjava.lesson_2_3_4.calculator;
 
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class Calculator {
 
@@ -12,18 +11,17 @@ public class Calculator {
         while (answer != 'N') {
             if (answer == 'Y') {
                 System.out.print("Enter the math expression on one line. (For example 2+2): ");
-                String text = sc.nextLine();
-                text.replaceAll("\\s", "");
-
-                String[] numbers = text.split("[\\Q^*/+-%\\E]");
-                
-                int num1 = Integer.parseInt(numbers[0]);
-                char sign = numbers[1].charAt(0);
-                int num2 = Integer.parseInt(numbers[2]);
+                String string = sc.nextLine();
+                String text = string.replaceAll("\\s+", ""); //убрать все пробелы, не зависимо от их количества
+                String[] numbs = text.split("\\D+"); //занести в массив только цифры
+                String[] signs = text.split("\\d+"); //занести в массив только символы
+                int num1 = Integer.parseInt(numbs[0]);
+                char sign = signs[1].charAt(0);
+                int num2 = Integer.parseInt(numbs[1]);
                 System.out.println(calculate(num1, sign, num2));
             }
-            System.out.println("Do you want to continue? [Y/N]:");
-            answer = sc.next().charAt(0);
+            System.out.print("Do you want to continue? [Y/N]: ");
+            answer = sc.nextLine().charAt(0);
             if (answer != 'N' && answer != 'Y') {
                 System.out.println("Wrong answer! Try again!");
             }
@@ -38,14 +36,15 @@ public class Calculator {
             case '-':
                 return Math.subtractExact(num1, num2);
             case '*':
-                return Math.multiplyExact(num2, num1);
+                return Math.multiplyExact(num1, num2);
             case '/':
-                if (num2 == 0) {
+                int res = -1;
+                try {
+                    res = Math.floorDiv(num1, num2);
+                } catch (ArithmeticException e) {
                     System.out.println("Error! You cannot divide by zero.");
-                } else {
-                    return Math.floorDiv(num1, num2);
                 }
-                break;
+                return res;
             case '%':
                 return Math.floorMod(num1, num2);
             case '^':
