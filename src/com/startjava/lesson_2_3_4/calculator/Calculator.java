@@ -38,13 +38,12 @@ public class Calculator {
             case '*':
                 return Math.multiplyExact(num1, num2);
             case '/':
-                int res = -1;
                 try {
-                    res = Math.floorDiv(num1, num2);
+                    return Math.floorDiv(num1, num2);
                 } catch (ArithmeticException e) {
                     System.out.println("Error! You cannot divide by zero.");
                 }
-                return res;
+                break;
             case '%':
                 return Math.floorMod(num1, num2);
             case '^':
