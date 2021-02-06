@@ -18,7 +18,7 @@ public class Calculator {
                 int num1 = Integer.parseInt(numbs[0]);
                 char sign = signs[1].charAt(0);
                 int num2 = Integer.parseInt(numbs[1]);
-                System.out.println(calculate(num1, sign, num2));
+                calculate(num1, sign, num2);
             }
             System.out.print("Do you want to continue? [Y/N]: ");
             answer = sc.nextLine().charAt(0);
@@ -28,30 +28,37 @@ public class Calculator {
         }
     }
 
-    public int calculate(int num1, char sign, int num2) {
-        int result = 0;
+    public void calculate(int num1, char sign, int num2) {
         switch (sign) {
             case '+':
-                return Math.addExact(num1, num2);
+                System.out.println(Math.addExact(num1, num2));
+                break;
             case '-':
-                return Math.subtractExact(num1, num2);
+                System.out.println(Math.subtractExact(num1, num2));
+                break;
             case '*':
-                return Math.multiplyExact(num1, num2);
+                System.out.println(Math.multiplyExact(num1, num2));
+                break;
             case '/':
                 try {
-                    return Math.floorDiv(num1, num2);
+                    System.out.println(Math.floorDiv(num1, num2));
                 } catch (ArithmeticException e) {
                     System.out.println("Error! You cannot divide by zero.");
                 }
                 break;
             case '%':
-                return Math.floorMod(num1, num2);
+                try {
+                    System.out.println(Math.floorMod(num1, num2));
+                } catch (ArithmeticException e) {
+                    System.out.println("Error! You cannot divide by zero.");
+                }
+                break;
             case '^':
-                return (int) Math.pow(num1, num2);
+                System.out.println((int) Math.pow(num1, num2));
+                break;
             default:
                 System.out.println("Wrong operation! Try again.");
                 break;
         }
-        return result;
     }
 }
